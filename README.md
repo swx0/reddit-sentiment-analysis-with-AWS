@@ -165,7 +165,7 @@ FROM
 #### 2.5.5 Further sentiment analysis
 Aggregate functions like maximum, minimum, average etc. can be generated from Athena queries as well. <br/>
 ```
-	SELECT AVG(positive_score) AS average_positive_score,
+SELECT AVG(positive_score) AS average_positive_score,
    MAX(positive_score) AS max_positive_score,
    MIN(positive_score) AS min_positive_score,
    AVG(negative_score) AS average_negative_score,
