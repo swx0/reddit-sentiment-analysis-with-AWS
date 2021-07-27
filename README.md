@@ -87,7 +87,7 @@ WITH SERDEPROPERTIES (
 ) LOCATION 's3://<your-bucket-name>/'
 TBLPROPERTIES ('has_encrypted_data'='false');
 ```
-![athena tables 2](https://user-images.githubusercontent.com/76123658/127139919-d270cd5d-c1ec-47f2-8b2d-bd2079aaecfd.png)
+<img src="https://user-images.githubusercontent.com/76123658/127139919-d270cd5d-c1ec-47f2-8b2d-bd2079aaecfd.png" width="215" height="364">
 
 Test if Athena is able to query from the S3 bucket.<br/>
 ```
