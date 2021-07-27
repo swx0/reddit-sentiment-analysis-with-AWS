@@ -120,7 +120,7 @@ SELECT * FROM "<your-database-name>"."<your-analysis-table-name>" limit 10;
 
 
 #### 2.5.3 Sentiment analysis table (Column format)
-Tabulate each sentiment score as an individual column. <br/>
+Create a new table to tabulate each sentiment score as an individual column. <br/>
 ```
 CREATE TABLE <your-final-analysis-table-name>  WITH (format='parquet') AS
 SELECT 
