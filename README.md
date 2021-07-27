@@ -66,6 +66,9 @@ Access your Lambda function on the Lambda console, select *‘Add trigger’*. <
 Create a new rule and under *‘Schedule expression’*, specify the frequency you want the lambda function to be invoked.<br/>
 Eg. rate(15 minutes) to invoke every 15 minutes. <br/>
 
+![lambda cloudwatch](https://user-images.githubusercontent.com/76123658/127140010-31241430-e19b-4d5c-b27d-d2c57e187ffa.png)
+
+
 ### 2.4 Setting up Athena
 Within Athena console, specify a S3 bucket for query result location under ‘Settings’ <br/>
 
@@ -84,6 +87,7 @@ WITH SERDEPROPERTIES (
 ) LOCATION 's3://<your-bucket-name>/'
 TBLPROPERTIES ('has_encrypted_data'='false');
 ```
+![athena tables 2](https://user-images.githubusercontent.com/76123658/127139919-d270cd5d-c1ec-47f2-8b2d-bd2079aaecfd.png)
 
 Test if Athena is able to query from the S3 bucket.<br/>
 ```
@@ -112,6 +116,8 @@ Test if the sentiments and entities columns are created. <br/>
 ```
 SELECT * FROM "<your-database-name>"."<your-analysis-table-name>" limit 10;
 ```
+![sentiment](https://user-images.githubusercontent.com/76123658/127139765-28b4b5a0-0adc-4329-824e-b007711642ef.png)
+
 
 #### 2.5.3 Sentiment analysis table (Column format)
 Tabulate each sentiment score as an individual column. <br/>
@@ -127,6 +133,8 @@ SELECT
    description
 FROM <your-analysis-table-name>
 ```
+![sentiment final](https://user-images.githubusercontent.com/76123658/127139693-713b2af7-12df-41c9-aa22-3af9e3361331.png)
+
 
 #### 2.5.4 Entities analysis table (Column format)
 Create a table consisting of the entities found in the description and its associated category and score. <br/>
@@ -152,6 +160,7 @@ FROM
    CROSS JOIN UNNEST(entities_array) AS t(entity_element)
 )
 ```
+![entities](https://user-images.githubusercontent.com/76123658/127139520-424a5256-7880-4bc8-b590-85a4c8eb4a15.png)
 
 #### 2.5.5 Further sentiment analysis
 Aggregate functions like maximum, minimum, average etc. can be generated from Athena queries as well. <br/>
@@ -171,6 +180,7 @@ Aggregate functions like maximum, minimum, average etc. can be generated from At
 
 FROM <your-final-analysis-table-name>
 ```
+![further sentiment](https://user-images.githubusercontent.com/76123658/127139413-2e86e3cc-c582-45a4-a02f-b722ee66ce2c.png)
 
 [Amazon QuickSight](https://aws.amazon.com/quicksight/), a business intelligence (BI) service, can also be used to generate a dashboard and gain further insights on the data.
 
