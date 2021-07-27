@@ -72,7 +72,7 @@ Eg. rate(15 minutes) to invoke every 15 minutes. <br/>
 ### 2.4 Setting up Athena
 Within Athena console, specify a S3 bucket for query result location under ‘Settings’ <br/>
 
-Create a new table, with 4 columns (id, subreddit, title, description).<br/>
+Create a **new table**, with 4 columns (id, subreddit, title, description).<br/>
 ```
 CREATE EXTERNAL TABLE IF NOT EXISTS <your-database-name>.<your-table-name> (
   `id` string,
