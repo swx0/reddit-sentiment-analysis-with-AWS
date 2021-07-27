@@ -5,7 +5,7 @@ The purpose of this project is to analyse user sentiments on Reddit feeds. Each 
 
 ## Architecture
 ![sentiment architecture](https://user-images.githubusercontent.com/76123658/127139261-0bf9ecf4-08a5-42d8-bae6-5355b1cfb6e5.png)
-When triggered by the CloudWatch scheduled events, Lambda function will update the corresponding .csv file of the subreddit according to the new posts. The S3 bucket will contain all the .csv files and Amazon Athena will perform SQL queries on these files. Amazon Comprehend is used to perform sentiment analysis on the text.
+When triggered by the CloudWatch scheduled events, Lambda function will update the corresponding .csv file of the subreddit with the new posts. The S3 bucket will contain all the .csv files and Amazon Athena will perform SQL queries on these files. Amazon Comprehend is used to perform sentiment analysis on the text.
 
 ## Option 1: CloudFormation
 
