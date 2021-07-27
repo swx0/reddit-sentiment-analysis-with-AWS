@@ -53,7 +53,7 @@ Copy and paste the code from lambda_function_github.py to the lambda_function.py
 Deploy updated lambda_function.py.<br/>
 
 #### 2.2.2 Add dependencies under Layers
-Since the lambda_function.py uses ‘requests’ library which is not in the standard library. To run the script, search for your region and the ‘requests’ package to find the appropriate ARN [here](https://github.com/keithrozario/Klayers/tree/master/deployments/python3.8/arns]). <br/>
+Since the lambda_function.py uses ‘requests’ library which is not in the standard library. To run the script, search for your region and the ‘requests’ package to find the appropriate ARN [here](https://github.com/keithrozario/Klayers/tree/master/deployments/python3.8/arns). <br/>
 
 Select *‘Add a layer’* under Layers and select *‘Specify an ARN’*. Input the ARN.<br/>
 
