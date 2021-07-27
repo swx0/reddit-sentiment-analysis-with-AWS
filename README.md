@@ -48,7 +48,7 @@ Create a new **Lambda function** and specify the runtime as Python 3.8. <br/>
 
 Select *‘Use an existing role’* for the execution role and search for the newly created role, then create.<br/>
 
-Copy and paste the code from lambda_function.py to the lambda_function.py on the console (Modified from achernyshova/Reddit-NLP-Classification) and edit the bucket name  accordingly. Edit the subreddits to be analysed under the TOPICS list.<br/>
+Copy and paste the code from lambda_function_github.py to the lambda_function.py on the console (Modified from achernyshova/Reddit-NLP-Classification) and edit the bucket name  accordingly. Edit the subreddits to be analysed under the TOPICS list.<br/>
 
 Deploy updated lambda_function.py.<br/>
 
